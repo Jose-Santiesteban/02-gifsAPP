@@ -9,7 +9,9 @@ import { GifsService } from 'src/app/gifs/services/gifs.service';
 })
 export class SidebarComponent {
 
-  
+  buscar(arg: string){
+    this.gifsServices.agregarBusqueda(arg);
+  }
   get listado(){
     return this.gifsServices.busquedas;
   }
